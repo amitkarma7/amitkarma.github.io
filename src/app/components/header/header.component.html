@@ -1,0 +1,38 @@
+<header class="site-header" [class.scrolled]="isScrolled()">
+  <div class="header-inner">
+    <a href="#home" class="brand" (click)="closeMenu()">
+      <span class="brand-mark">AK</span>
+      <span class="brand-name">{{ profile.name }}</span>
+    </a>
+
+    <nav class="nav-desktop" aria-label="Primary">
+      <ul>
+        @for (link of navLinks; track link.href) {
+          <li><a [href]="link.href">{{ link.label }}</a></li>
+        }
+      </ul>
+    </nav>
+
+    <button
+      class="menu-toggle"
+      type="button"
+      [attr.aria-expanded]="isMenuOpen()"
+      aria-label="Toggle navigation menu"
+      (click)="toggleMenu()"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+
+  @if (isMenuOpen()) {
+    <nav class="nav-mobile" aria-label="Mobile">
+      <ul>
+        @for (link of navLinks; track link.href) {
+          <li><a [href]="link.href" (click)="closeMenu()">{{ link.label }}</a></li>
+        }
+      </ul>
+    </nav>
+  }
+</header>

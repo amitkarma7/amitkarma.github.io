@@ -1,0 +1,23 @@
+<section class="section education">
+  <div class="section-inner">
+    <p class="section-eyebrow">Education</p>
+    <h2 class="section-title">Educational Qualification</h2>
+
+    @if (education.length) {
+      <div class="education-list">
+        @for (edu of education; track edu.institution) {
+          <div class="education-card card">
+            <div class="cap-icon" aria-hidden="true">🎓</div>
+            <div>
+              <h3>{{ edu.degree }}</h3>
+              <p class="institution">{{ edu.institution }}</p>
+              <p class="duration">{{ edu.duration }}</p>
+            </div>
+          </div>
+        }
+      </div>
+    } @else {
+      <p class="placeholder">Education information not available.</p>
+    }
+  </div>
+</section>

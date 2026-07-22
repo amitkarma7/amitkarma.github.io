@@ -1,0 +1,51 @@
+.education {
+  background: var(--color-surface);
+}
+
+.education-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.education-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 24px 26px;
+  background: var(--color-bg);
+  max-width: 640px;
+
+  h3 {
+    font-size: 1.02rem;
+    font-weight: 700;
+  }
+}
+
+.cap-icon {
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-sm);
+  background: var(--color-accent-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+}
+
+.institution {
+  margin-top: 4px;
+  font-size: 0.92rem;
+}
+
+.duration {
+  margin-top: 4px;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+.placeholder {
+  font-style: italic;
+}

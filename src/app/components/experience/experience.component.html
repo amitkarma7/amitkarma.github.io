@@ -1,0 +1,42 @@
+<section class="section experience">
+  <div class="section-inner">
+    <p class="section-eyebrow">Experience</p>
+    <h2 class="section-title">Where I've Worked</h2>
+    <p class="section-lede">7+ years across enterprise product, consulting and platform engineering teams.</p>
+
+    @if (experience.length) {
+      <ol class="timeline">
+        @for (job of experience; track job.company) {
+          <li class="timeline-item">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-content card">
+              <div class="timeline-heading">
+                <div>
+                  <h3>{{ job.role }}</h3>
+                  <p class="company">{{ job.company }}</p>
+                </div>
+                <span class="duration">{{ job.duration }}</span>
+              </div>
+              <ul class="responsibilities">
+                @for (item of job.responsibilities; track item) {
+                  <li>{{ item }}</li>
+                }
+              </ul>
+              <div class="tech-used">
+                @if (job.technologies.length) {
+                  @for (tech of job.technologies; track tech) {
+                    <span class="tag">{{ tech }}</span>
+                  }
+                } @else {
+                  <span class="tag tag-muted">Not specified in resume</span>
+                }
+              </div>
+            </div>
+          </li>
+        }
+      </ol>
+    } @else {
+      <p class="placeholder">Experience information not available.</p>
+    }
+  </div>
+</section>
