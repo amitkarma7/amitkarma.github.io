@@ -41,7 +41,7 @@ jobs:
           # Angular CLI outputs to dist/<project-name>/browser (Angular 17+).
           # <PROJECT_NAME> = the "projects" key in angular.json, which may
           # differ from the repo name. For older Angular (<17), drop /browser.
-          path: dist/<PROJECT_NAME>/browser
+          path: dist/portfolio/browser
 
   deploy:
     needs: build
