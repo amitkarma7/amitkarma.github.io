@@ -31,17 +31,17 @@ jobs:
         run: npm ci
 
       - name: Build Angular app
-        # --base-href is required for GitHub Pages project sites
-        # (served from https://<user>.github.io/<repo>/)
-        # Replace <REPO_NAME> with your repository name
-        run: npx ng build --configuration production --base-href /<REPO_NAME>/
+        # amitkarma.github.io is a user/org Pages site, served from the
+        # root domain (https://amitkarma.github.io/) — no base-href subpath needed.
+        run: npx ng build --configuration production --base-href /
 
       - name: Upload build artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Angular CLI outputs to dist/<project-name>/browser (Angular 17+)
-          # For older Angular versions use: dist/<project-name>
-          path: dist/<REPO_NAME>/browser
+          # Angular CLI outputs to dist/<project-name>/browser (Angular 17+).
+          # <PROJECT_NAME> = the "projects" key in angular.json, which may
+          # differ from the repo name. For older Angular (<17), drop /browser.
+          path: dist/<PROJECT_NAME>/browser
 
   deploy:
     needs: build
