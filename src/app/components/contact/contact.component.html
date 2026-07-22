@@ -1,0 +1,23 @@
+<section class="section contact">
+  <div class="section-inner contact-inner">
+    <div class="contact-copy">
+      <p class="section-eyebrow">Contact</p>
+      <h2 class="section-title">Let's Work Together</h2>
+      <p class="section-lede">
+        Open to new opportunities and collaborations. Reach out through any of the channels below.
+      </p>
+    </div>
+
+    <div class="contact-grid">
+      @for (link of contactLinks; track link.label) {
+        <a class="contact-card card" [href]="link.href" target="_blank" rel="noopener">
+          <span class="icon">{{ link.icon }}</span>
+          <span class="details">
+            <span class="label">{{ link.label }}</span>
+            <span class="value">{{ link.value }}</span>
+          </span>
+        </a>
+      }
+    </div>
+  </div>
+</section>

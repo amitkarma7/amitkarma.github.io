@@ -1,0 +1,10 @@
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p>© {{ year }} {{ profile.name }}. All rights reserved.</p>
+    <div class="footer-links">
+      <a [href]="'mailto:' + profile.email">{{ profile.email }}</a>
+      <a [href]="'https://' + profile.linkedin" target="_blank" rel="noopener">LinkedIn</a>
+      <a [href]="'https://' + profile.github" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+</footer>

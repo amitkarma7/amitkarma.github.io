@@ -1,0 +1,35 @@
+<section class="section">
+  <div class="section-inner">
+    <p class="section-eyebrow">Projects</p>
+    <h2 class="section-title">Key Achievements</h2>
+    <p class="section-lede">Selected work from my professional experience, spanning real-time communication, dynamic forms and document management.</p>
+
+    @if (projects.length) {
+      <div class="projects-grid">
+        @for (project of projects; track project.name) {
+          <article class="project-card card">
+            <h3>{{ project.name }}</h3>
+            <p class="description">{{ project.description }}</p>
+
+            <div class="tech-row">
+              @for (tech of project.technologies; track tech) {
+                <span class="tag">{{ tech }}</span>
+              }
+            </div>
+
+            <div class="features">
+              <span class="features-label">Key Features</span>
+              <ul>
+                @for (feature of project.features; track feature) {
+                  <li>{{ feature }}</li>
+                }
+              </ul>
+            </div>
+          </article>
+        }
+      </div>
+    } @else {
+      <p class="placeholder">Project information not available.</p>
+    }
+  </div>
+</section>

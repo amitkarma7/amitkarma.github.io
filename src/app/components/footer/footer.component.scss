@@ -1,0 +1,31 @@
+.site-footer {
+  background: var(--color-navy);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 24px;
+}
+
+.footer-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 0.84rem;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+
+  a {
+    color: rgba(255, 255, 255, 0.75);
+    transition: color 200ms ease;
+  }
+
+  a:hover {
+    color: #93c5fd;
+  }
+}

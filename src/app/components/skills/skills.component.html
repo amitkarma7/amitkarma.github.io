@@ -1,0 +1,24 @@
+<section class="section">
+  <div class="section-inner">
+    <p class="section-eyebrow">Skills</p>
+    <h2 class="section-title">Technical Expertise</h2>
+    <p class="section-lede">The languages, frameworks and tools I use to design, build and ship enterprise-grade applications.</p>
+
+    @if (skillGroups.length) {
+      <div class="skills-grid">
+        @for (group of skillGroups; track group.category) {
+          <div class="skill-card card">
+            <h3>{{ group.category }}</h3>
+            <div class="skill-tags">
+              @for (skill of group.skills; track skill) {
+                <span class="tag">{{ skill }}</span>
+              }
+            </div>
+          </div>
+        }
+      </div>
+    } @else {
+      <p class="placeholder">Skills information not available.</p>
+    }
+  </div>
+</section>

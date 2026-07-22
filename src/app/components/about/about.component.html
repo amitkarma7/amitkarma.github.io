@@ -1,0 +1,18 @@
+<section class="section about">
+  <div class="section-inner about-grid">
+    <div>
+      <p class="section-eyebrow">About</p>
+      <h2 class="section-title">Professional Summary</h2>
+      <p class="about-text">{{ profile.summary }}</p>
+    </div>
+
+    <div class="stats">
+      @for (stat of stats; track stat.label) {
+        <div class="stat card">
+          <span class="stat-value">{{ stat.value }}</span>
+          <span class="stat-label">{{ stat.label }}</span>
+        </div>
+      }
+    </div>
+  </div>
+</section>
