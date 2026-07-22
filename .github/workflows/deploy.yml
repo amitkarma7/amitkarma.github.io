@@ -33,7 +33,7 @@ jobs:
       - name: Build Angular app
         # amitkarma.github.io is a user/org Pages site, served from the
         # root domain (https://amitkarma.github.io/) — no base-href subpath needed.
-        run: npx ng build --configuration production --base-href /
+        run: npx ng build --configuration production --base-href /me/
 
       - name: Upload build artifact
         uses: actions/upload-pages-artifact@v3
