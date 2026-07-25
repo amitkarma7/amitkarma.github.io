@@ -1,8 +1,6 @@
 name: Deploy Angular
 
 on:
-  push:
-    branches: [developer]
   workflow_dispatch:
 
 permissions:
