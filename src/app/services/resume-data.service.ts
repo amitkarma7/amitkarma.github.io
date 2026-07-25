@@ -20,6 +20,7 @@ export class ResumeDataService {
       "I'm a Software Engineer 2 with strong proficiency in Java, Angular, Spring Boot and Microservices, focused on building scalable, enterprise-grade applications.",
     summary:
       'I am an experienced Software Engineer 2 with strong proficiency in Java, Angular, Spring Boot, Microservices. I excel in developing scalable applications using object-oriented principles, and I thrive in Agile environments. With a proven track record in enterprise-level application design and implementation, I focus on delivering secure, efficient solutions that meet compliance and enhance operational performance.',
+    photoUrl: 'assets/profile.png',
   };
 
   readonly skillGroups: SkillGroup[] = [

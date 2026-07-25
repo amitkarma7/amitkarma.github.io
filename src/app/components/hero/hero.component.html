@@ -16,8 +16,12 @@
       </div>
     </div>
 
-    <div class="hero-panel" aria-hidden="true">
-      <div class="panel-window">
+    <div class="hero-panel">
+      <div class="photo-frame">
+        <img [src]="profile.photoUrl" [alt]="profile.name" class="profile-photo" />
+      </div>
+
+      <div class="panel-window" aria-hidden="true">
         <div class="panel-dots"><span></span><span></span><span></span></div>
         <div class="panel-body">
           <p><span class="k">const</span>&nbsp;<span class="v">engineer</span> = {{ '{' }}</p>

@@ -7,6 +7,7 @@ export interface Profile {
   github: string;
   summary: string;
   intro: string;
+  photoUrl: string;
 }
 
 export interface SkillGroup {
